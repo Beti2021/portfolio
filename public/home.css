@@ -1,0 +1,184 @@
+body{
+    background-color:#a0aecd;
+    font-family: "Edu AU VIC WA NT Arrows", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+ 
+  
+  
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#home {
+    border-bottom-left-radius: 50px;
+    border-end-end-radius: 50px;
+}
+
+
+li{
+    list-style-type: none;
+}
+
+
+
+.nav-list .nav-link {
+    text-decoration: none;  
+    transition: color 0.3s ease, transform 0.3s ease; 
+    font-size: 20px;
+}
+
+.nav-list .nav-link:hover {
+    color:yellow!important; 
+    font-size: 1.4rem; 
+    transform: scale(1.1);
+}
+.img-fluid:hover{
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+
+.navbar{
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3); 
+    padding: 10px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+.bg-secondary{
+background-color:#333D51!important;
+}
+
+
+.project-image-wrapper {
+    position: relative; 
+    height: 200px; 
+    transition: background-color 0.3s ease; 
+}
+
+.project-description {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 10px;
+   
+    color:white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.project-image-wrapper:hover .project-description {
+    opacity: 1; 
+}
+
+.project-image-wrapper:hover {
+    background-color:#872642;
+}
+
+.project-image-wrapper img {
+    transition: opacity 0.3s ease; 
+}
+
+
+.project-image-wrapper:hover img {
+    opacity: 0.2; 
+}
+
+.no-border-bottom {
+    border-bottom: none !important;
+}
+#skill{
+    background-color: #333D51;
+border-radius: 100px;
+
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    backdrop-filter: blur(5px); 
+}
+
+
+.modal-content {
+    background:#333D51;
+    color:white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+
+.short-description {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.text-primary {
+    cursor: pointer;
+    color: yellow!important;
+    text-decoration: none;
+}
+
+.text-primary:hover {
+    color:#D3AC2B!important;
+}
+.btn-primary{
+background-color:#a0aecd!important;
+border: none;
+}
+.btn-primary:hover{
+    background-color: #333D51!important;
+}
+
+
+footer {
+    background-color: #333D51;  
+    padding: 10px;
+    color:#D3AC2B; 
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+.bg-dark{
+    background-color: #333D51 !important;
+
+}
+
+
+
+
