@@ -1,184 +1,98 @@
 body{
-    background-color:#a0aecd;
-    font-family: "Edu AU VIC WA NT Arrows", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
- 
-  
-  
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-#home {
-    border-bottom-left-radius: 50px;
-    border-end-end-radius: 50px;
-}
-
-
-li{
-    list-style-type: none;
-}
-
-
-
-.nav-list .nav-link {
-    text-decoration: none;  
-    transition: color 0.3s ease, transform 0.3s ease; 
-    font-size: 20px;
-}
-
-.nav-list .nav-link:hover {
-    color:yellow!important; 
-    font-size: 1.4rem; 
-    transform: scale(1.1);
-}
-.img-fluid:hover{
-    transform: scale(1.1); 
-    transition: transform 0.3s ease;
-}
-
-.navbar{
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3); 
-    padding: 10px;
-    border-bottom-right-radius: 100px;
-    border-bottom-left-radius: 100px;
-}
-.bg-secondary{
-background-color:#333D51!important;
-}
-
-
-.project-image-wrapper {
-    position: relative; 
-    height: 200px; 
-    transition: background-color 0.3s ease; 
-}
-
-.project-description {
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    padding: 10px;
-   
-    color:white;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    text-align: center;
-    width: 100%;
-}
-
-.project-image-wrapper:hover .project-description {
-    opacity: 1; 
-}
-
-.project-image-wrapper:hover {
-    background-color:#872642;
-}
-
-.project-image-wrapper img {
-    transition: opacity 0.3s ease; 
-}
-
-
-.project-image-wrapper:hover img {
-    opacity: 0.2; 
-}
-
-.no-border-bottom {
-    border-bottom: none !important;
-}
-#skill{
-    background-color: #333D51;
-border-radius: 100px;
-
-}
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1050;
-    backdrop-filter: blur(5px); 
-}
-
-
-.modal-content {
-    background:#333D51;
-    color:white;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-
-.short-description {
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-body.modal-open {
-    overflow: hidden;
-}
-
-.text-primary {
-    cursor: pointer;
-    color: yellow!important;
-    text-decoration: none;
-}
-
-.text-primary:hover {
-    color:#D3AC2B!important;
-}
-.btn-primary{
-background-color:#a0aecd!important;
-border: none;
-}
-.btn-primary:hover{
-    background-color: #333D51!important;
-}
-
-
-footer {
-    background-color: #333D51;  
-    padding: 10px;
-    color:#D3AC2B; 
-}
-
-footer p {
-    font-size: 0.9rem;
+    background-color: #34495E;
+    color:#BDC3C7;
 }
 .bg-dark{
-    background-color: #333D51 !important;
+    background-color: #34495E!important ;
+}
 
+.bg-secondary{
+    background-color:#BDC3C7!important;
+}
+.text-primary{
+    color:#BDC3C7!important;
+}
+/* Global light theme (default) */
+
+img {
+    border: 2px solid #fff;
+    padding: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Dark theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+/* Make the dark and light mode icons white */
+.bi {
+    color: white; /* Ensure the icons are white */
+}
+
+/* Navbar list items hover effect */
+.navbar-nav .nav-link {
+    text-decoration: none; /* Remove default underline */
+    color: white; /* Ensure text color is white */
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
 
 
+/* Optional: Adjust navbar background for dark theme */
+body.dark-theme .navbar {
+    background-color: #333; /* Dark background for navbar in dark mode */
+}
+.btn-outline-secondary:hover{
+    background-color:#61dafb ;
+}
 
+/* Hover effect for the icons */
+/* Hover effect for the social media icons */
+.social-icon:hover {
+    color: #61dafb; /* Change color to #61dafb on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+
+/* Navbar list items */
+.navbar-nav .nav-link {
+    text-decoration: none; /* Remove default underline */
+    color: white; /* Default text color */
+    position: relative; /* Enable positioning for pseudo-element */
+    font-size: 18px; /* Font size */
+    padding-bottom: 5px; /* Space for the underline */
+    transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+/* Hover effect with underline */
+.navbar-nav .nav-link:hover {
+    color: #61dafb; /* Blue color on hover */
+}
+
+/* Underline effect */
+.navbar-nav .nav-link::after {
+    content: ""; /* Empty content */
+    position: absolute; /* Position it absolutely inside the nav-link */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Start from the left */
+    width: 0; /* Start with 0 width */
+    height: 2px; /* Thickness of the underline */
+    background-color:#61dafb; /* Blue color for the underline */
+    transition: width 0.4s ease, left 0.4s ease; /* Smooth transition for width and left positioning */
+}
+
+/* Make the underline visible on hover */
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Expand the underline to the full width */
+    left: 0; /* Align the underline to the left of the element */
+}
+
+
+
+/*home*/
+/* Background animation */
+#home {
+    background: linear-gradient(90deg,#34495E 50%, #BDC3C7 50%);
+    /* Smooth animation if needed */
+    animation: backgroundAnimation 8s ease infinite;
+}

@@ -1,0 +1,226 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+ background-color: #003366;
+  color: white;
+}
+
+h2, h3, h4 {
+  color: #003366;
+  font-size: 1rem;
+}
+
+h4 {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbar ul li {
+  margin-right: 10px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.navbar ul li a:hover {
+  color: #0073e6;
+}
+
+/* Registration Container */
+.registration-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #003366;
+}
+
+/* Form Wrapper */
+.form-wrapper {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  flex: 1;
+  max-width: 80%;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Registration Form */
+.registration-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.input-group {
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: bold;
+  color: #003366;
+  font-size: 0.8rem;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.input-group input[type="file"] {
+  padding: 4px;
+}
+
+.button-group {
+  grid-column: span 4;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+}
+
+.success-message h3 {
+  font-size: 1rem;
+  color: #003366;
+}
+
+/* Student Info Table */
+.student-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.7rem;
+}
+
+.student-info-table th,
+.student-info-table td {
+  padding: 6px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.student-info-table th {
+  background-color: #003366;
+  color: white;
+}
+
+.student-info-table tr {
+  background-color: #f9f9f9;
+}
+
+.student-info-table tr:hover {
+  background-color: #64a8eb;
+}
+
+/* Styles for success section */
+.student-info-container {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  flex: 1;
+  max-width: 48%;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-info-container h4 {
+  margin-top: 8px;
+  color: #003366;
+  font-size: 0.9rem;
+}
+
+.student-info-container table {
+  margin-top: 6px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-info-container th, .student-info-container td {
+  padding: 6px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.student-info-container th {
+  background-color: #003366;
+  color: white;
+}
+
+.student-info-container tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.student-info-container tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Specific Adjustments for Title and Name Inputs */
+h2 {
+  grid-column: span 4;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.input-group.first-name,
+.input-group.last-name {
+  grid-column: span 2;
+  margin-top: 10px;
+}

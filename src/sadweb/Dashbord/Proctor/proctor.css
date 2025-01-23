@@ -1,0 +1,77 @@
+/* ProctorPage.css */
+.proctor-page-container {
+  font-family: 'Roboto', sans-serif; /* Use the Roboto font */
+  color: #fff;
+  background-color: #003366; /* Blue-black background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.proctor-form {
+  background-color: #fff; /* White background for the form */
+  color: #333;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for content box */
+}
+
+.login-button {
+  background-color: #4CAF50; /* Green background for the button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.header-table {
+  color: white;
+  border: 2px solid #003366;
+  margin-top: 0;
+  background-color: #003366;
+}
+
+.content {
+  color: #003366;
+  border: 2px solid #003366;
+}
+
+.proctor-login-title {
+  font-size: 24px; /* Prominent title */
+  font-weight: bold;
+  margin-bottom: 20px; /* Space between title and inputs */
+  text-align: center;
+  color: #333; /* Match form text color */
+}
+
+.head {
+  color: white;
+  font-size: 30px;
+}
+
+.search-container {
+  display: flex; /* Horizontal layout */
+  justify-content: flex-start; /* Align items to the left */
+  align-items: flex-start; /* Align at the top */
+  gap: 20px; /* Space between the search form and result */
+}
+
+.search-bar {
+  flex: 1; /* Adjust width of the search bar */
+}
+
+.search-result {
+  flex: 2; /* Allow result to take up more space */
+  background-color: #fff; /* White background for better readability */
+  color: #003366; /* Text color */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
+}

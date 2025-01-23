@@ -1,0 +1,150 @@
+/* Basic styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+/* General styling for the student container */
+./* General styling for the student container */
+.student-container {
+  font-family: 'Roboto', sans-serif; /* Change to 'Roboto' font */
+  color: #fff;
+  background-color: #003366!important; /* Blue-black background */
+  min-height: 100vh;
+  padding: 20px;
+
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #003366; /* Dark blue-black background */
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for navbar */
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end; /* Align list items to the right */
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #66cc66; /* Green color on hover */
+}
+
+/* Styling for student content */
+.student-content {
+  background-color: #fff;
+  color: #333;
+  padding: 30px;
+  max-width: 600px;
+  margin: 50px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for content box */
+  text-align: center;
+}
+
+h2 {
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.user-id {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Registration Prompt Styling */
+.registration-prompt p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.btn-register {
+  padding: 12px 24px;
+  background-color: #66cc66; /* Green button */
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+.btn-register:hover {
+  background-color: #55b855; /* Darker green on hover */
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .student-container {
+    padding: 10px;
+  }
+
+  .student-content {
+    padding: 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center; /* Stack navbar links vertically on smaller screens */
+  }
+
+  .navbar ul li {
+    margin-bottom: 10px;
+  }
+}
+
+..registration-table {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-row {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-header {
+  font-weight: bold;
+  flex: 1;
+  padding-right: 10px;
+  color: #555;
+}
+
+.table-cell {
+  flex: 2;
+  padding-left: 10px;
+  color: #333;
+  text-align: left;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
