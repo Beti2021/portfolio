@@ -11,7 +11,7 @@ function TestimonialItem({ name, photo, quote }) {
           width: "100px",
           height: "100px",
           objectFit: "cover",
-          border: "2px solid #fff",
+          
         }}
       />
       <h5 className="mb-2">{name}</h5>

@@ -5,6 +5,9 @@ body{
 .bg-dark{
     background-color: #34495E!important ;
 }
+.btn-success{
+    color: white!important;
+}
 
 .bg-secondary{
     background-color:#BDC3C7!important;
@@ -12,87 +15,190 @@ body{
 .text-primary{
     color:#BDC3C7!important;
 }
-/* Global light theme (default) */
+.text-white{
+    color:#BDC3C7!important;
+
+}
+
 
 img {
     border: 2px solid #fff;
     padding: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-/* Dark theme */
-body.dark-theme {
-    background-color: #121212;
-    color: #ffffff;
-}
-/* Make the dark and light mode icons white */
+
 .bi {
-    color: white; /* Ensure the icons are white */
+    color: white; 
 }
 
-/* Navbar list items hover effect */
+
 .navbar-nav .nav-link {
-    text-decoration: none; /* Remove default underline */
-    color: white; /* Ensure text color is white */
-    transition: all 0.3s ease; /* Smooth transition */
+    text-decoration: none; 
+    color: white; 
+    transition: all 0.3s ease; 
 }
 
 
 
-/* Optional: Adjust navbar background for dark theme */
-body.dark-theme .navbar {
-    background-color: #333; /* Dark background for navbar in dark mode */
-}
+
 .btn-outline-secondary:hover{
     background-color:#61dafb ;
 }
 
-/* Hover effect for the icons */
-/* Hover effect for the social media icons */
+
 .social-icon:hover {
-    color: #61dafb; /* Change color to #61dafb on hover */
-    transition: color 0.3s ease; /* Smooth transition */
+    color: #61dafb; 
+    transition: color 0.3s ease;
 }
 
 
-/* Navbar list items */
+
 .navbar-nav .nav-link {
-    text-decoration: none; /* Remove default underline */
-    color: white; /* Default text color */
-    position: relative; /* Enable positioning for pseudo-element */
-    font-size: 18px; /* Font size */
-    padding-bottom: 5px; /* Space for the underline */
-    transition: color 0.3s ease; /* Smooth text color transition */
+    text-decoration: none;
+    color: white; 
+    position: relative; 
+    font-size: 18px; 
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
 }
 
-/* Hover effect with underline */
+
 .navbar-nav .nav-link:hover {
-    color: #61dafb; /* Blue color on hover */
+    color: #61dafb; 
 }
 
 /* Underline effect */
 .navbar-nav .nav-link::after {
-    content: ""; /* Empty content */
-    position: absolute; /* Position it absolutely inside the nav-link */
-    bottom: 0; /* Align to the bottom */
-    left: 0; /* Start from the left */
-    width: 0; /* Start with 0 width */
-    height: 2px; /* Thickness of the underline */
-    background-color:#61dafb; /* Blue color for the underline */
-    transition: width 0.4s ease, left 0.4s ease; /* Smooth transition for width and left positioning */
-}
+    content: ""; 
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 0; 
+    height: 2px; 
+    background-color:#61dafb; 
+    transition: width 0.4s ease, left 0.4s ease; 
 
-/* Make the underline visible on hover */
+}
 .navbar-nav .nav-link:hover::after {
-    width: 100%; /* Expand the underline to the full width */
-    left: 0; /* Align the underline to the left of the element */
+    width: 100%; 
+    left: 0;
+}
+
+.text-primary .social-icon:hover {
+    color: #28a745; 
+    transition: color 0.3s ease;
+}
+
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;  
+}
+
+
+body.light-theme {
+    background-color: #BDC3C7; 
+    color: #34495E; 
+}
+
+
+body.light-theme .navbar {
+    background-color: #BDC3C7; 
+    color: #34495E; 
+    border-bottom: 1px solid #34495E;
+}
+
+
+body.light-theme .nav-link {
+    color: #BDC3C7; 
+}
+
+body.light-theme .nav-link:hover {
+    color: #61dafb; 
+}
+
+body.light-theme .nav-link:hover::after {
+    background-color: #61dafb; 
+}
+body.light-theme .text-white{
+    color:#BDC3C7!important;
+
+
+}
+
+navbar-toggler-icon {
+    background-color: transparent !important; 
+    border: none; 
 }
 
 
 
-/*home*/
-/* Background animation */
-#home {
-    background: linear-gradient(90deg,#34495E 50%, #BDC3C7 50%);
-    /* Smooth animation if needed */
-    animation: backgroundAnimation 8s ease infinite;
+body.light-theme .btn-outline-secondary {
+    border-color:#34495E;
+    color: #34495E; 
 }
+
+body.light-theme .btn-outline-secondary:hover {
+    background-color: #34495E; 
+    color: #BDC3C7; 
+}
+
+
+body.light-theme .social-icon:hover {
+    color: #34495E; 
+    transition: color 0.3s ease; 
+}
+
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6,
+body.light-theme p,
+body.light-theme a {
+    color: #34495E;
+}
+
+
+body.light-theme img {
+    border: 2px solid #34495E; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+body.light-theme .bg-secondary {
+    background-color: #34495E!important;
+    color: #BDC3C7; 
+}
+body.light-theme .text-primary{
+    color: #34495E!important;
+}
+
+
+body.light-theme .contact-form input,
+body.light-theme .contact-form textarea {
+    background-color: #BDC3C7; 
+    color: #34495E; 
+    border: 1px solid #34495E; 
+}
+
+body.light-theme .contact-form input::placeholder,
+body.light-theme .contact-form textarea::placeholder {
+    color: #34495E; 
+}
+
+body.light-theme .contact-form button {
+     
+    color: #34495E; 
+}
+
+body.light-theme .contact-form button:hover {
+    background-color:green;
+    color: #BDC3C7; 
+}
+
+

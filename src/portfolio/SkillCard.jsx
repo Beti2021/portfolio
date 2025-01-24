@@ -1,10 +1,10 @@
 import React from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { motion } from "framer-motion"; 
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 function SkillCard() {
-    // Define skills and their proficiency levels
     const skills = [
         { name: "HTML", icon: "bi-code-slash", color: "#e34c26", level: 90 },
         { name: "CSS", icon: "bi-palette", color: "#2965f1", level: 85 },
@@ -22,20 +22,34 @@ function SkillCard() {
                     <div className="shadow p-4 bg-transparent">
                         <div className="row">
                             {skills.map((skill, index) => (
-                                <div
+                                <motion.div
                                     key={index}
                                     className="col-md-6 mb-4 d-flex align-items-center"
+                                    whileInView={{ opacity: 1, x: 0 }}  
+                                    initial={{ opacity: 0, x: -50 }}
+                                    transition={{
+                                        duration: 0.6,
+                                        delay: index * 0.6,
+                                    }}
                                 >
-                                    {/* Icon and Skill Name */}
                                     <div
-                                        className="me-3 d-flex align-items-center skill-icon"
-                                        style={{ fontSize: "1.75rem", color: skill.color }}
+                                        className="me-3 d-flex align-items-center"
+                                        style={{
+                                            fontSize: "2rem", 
+                                            color: skill.color,
+                                        }}
                                     >
                                         <i className={`bi ${skill.icon} me-2`}></i>
                                         <span>{skill.name}</span>
                                     </div>
-                                    {/* Circular Progress */}
-                                    <div style={{ width: "60px", height: "60px", marginLeft: "auto" }}>
+
+                                    <div
+                                        style={{
+                                            width: "70px", 
+                                            height: "70px",
+                                            marginLeft: "auto",
+                                        }}
+                                    >
                                         <CircularProgressbar
                                             value={skill.level}
                                             text={`${skill.level}%`}
@@ -46,7 +60,7 @@ function SkillCard() {
                                             })}
                                         />
                                     </div>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                     </div>

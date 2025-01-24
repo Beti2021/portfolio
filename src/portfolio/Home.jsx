@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import photo from "../images/photo.jpg";
+import "animate.css";
 
 function Home() {
-    const [animateImage, setAnimateImage] = useState(false);
+    const [animate, setAnimate] = useState(false);
 
-    // Trigger animation when the component is mounted
     useEffect(() => {
-        setAnimateImage(true);
+        setAnimate(true);
     }, []);
 
     return (
@@ -16,9 +17,17 @@ function Home() {
         >
             <div className="container text-center text-white py-5">
                 <div className="row">
-                    <div className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center">
+                    
+                    <motion.div
+                        className={`col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center ${
+                            animate ? "animate__animated animate__fadeInLeft" : ""
+                        }`}
+                        initial={{ opacity: 0, x: -100 }} 
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1 }}
+                    >
                         <h1
-                            className="fw-bold text-wrap mb-3"
+                            className="fw-bold text-wrap mb-3 "
                             style={{ fontSize: "calc(1.5rem + 1vw)" }}
                         >
                             Betelhem Tadese
@@ -38,11 +47,19 @@ function Home() {
                             A passionate Frontend Developer and Designer dedicated to crafting beautiful, functional
                             websites and continuously improving my skills.
                         </p>
-                    </div>
+                    </motion.div>
 
-                    <div className="col-lg-6 col-md-6 col-sm-12">
+                    
+                    <motion.div
+                        className={`col-lg-6 col-md-6 col-sm-12 ${
+                            animate ? "animate__animated animate__fadeInRight" : ""
+                        }`}
+                        initial={{ opacity: 0, x: 100 }} 
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1 }}
+                    >
                         <img
-                            className={`img-fluid shadow ${animateImage ? "animate__animated animate__fadeInUp" : ""}`}
+                            className="img-fluid shadow"
                             style={{
                                 borderRadius: "50%",
                                 width: "calc(150px + 10vw)",
@@ -52,7 +69,7 @@ function Home() {
                             src={photo}
                             alt="Portfolio"
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

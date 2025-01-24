@@ -1,110 +1,110 @@
 import { NavLink } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(() => {
-        // Get theme preference from localStorage, default to false (light mode)
         return localStorage.getItem("theme") === "dark";
     });
 
-    // Toggle the navbar visibility
+    const navbarRef = useRef(null); 
+
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
     };
 
-    // Toggle between light and dark themes
+    const closeNavbar = () => {
+        setIsOpen(false);
+    };
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+                closeNavbar();
+            }
+        };
+
+        document.addEventListener("click", handleClickOutside);
+
+        
+        return () => {
+            document.removeEventListener("click", handleClickOutside);
+        };
+    }, []);
+
     const toggleTheme = () => {
         const newTheme = !isDarkMode;
         setIsDarkMode(newTheme);
 
-        // Apply theme class to body
-        document.body.classList.toggle("dark-theme", newTheme);
+        if (newTheme) {
+            document.body.classList.add("dark-theme");
+            document.body.classList.remove("light-theme");
+        } else {
+            document.body.classList.add("light-theme");
+            document.body.classList.remove("dark-theme");
+        }
 
-        // Save theme preference to localStorage
         localStorage.setItem("theme", newTheme ? "dark" : "light");
+        closeNavbar();
     };
 
-    // Apply the theme on component mount based on localStorage value
     useEffect(() => {
         if (isDarkMode) {
             document.body.classList.add("dark-theme");
+            document.body.classList.remove("light-theme");
         } else {
+            document.body.classList.add("light-theme");
             document.body.classList.remove("dark-theme");
         }
     }, [isDarkMode]);
 
     return (
-        <nav className="navbar navbar-expand-lg fixed-top bg-dark">
+        <nav className="navbar navbar-expand-lg fixed-top bg-dark shadow" ref={navbarRef}>
             <div className="container">
                 <NavLink
-                    className="navbar-brand text-primary"
+                    className="navbar-brand text-white"
                     to="/"
                     style={{ fontStyle: "italic", fontSize: "24px" }}
                 >
                     Betelhem Tadese
                 </NavLink>
 
-                <button
-                    className="navbar-toggler"
-                    type="button"
+
+                <i
+                    className="bi bi-list navbar-toggler"
+                    style={{ color: "white", fontSize: "30px", cursor: "pointer" }}
                     onClick={toggleNavbar}
-                    aria-expanded={isOpen}
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+                ></i>
 
                 <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
                     <ul className="navbar-nav ms-auto nav-list text-primary">
                         <li className="nav-item me-3">
-                            <NavLink
-                                to="/"
-                                className="nav-link"
-                                style={{ fontSize: "18px" }} // Font size for list items
-                            >
+                            <NavLink to="/" className="nav-link" style={{ fontSize: "18px" }} onClick={closeNavbar}>
                                 Home
                             </NavLink>
                         </li>
                         <li className="nav-item me-3">
-                            <NavLink
-                                to="/about"
-                                className="nav-link"
-                                style={{ fontSize: "18px" }} // Font size for list items
-                            >
+                            <NavLink to="/about" className="nav-link" style={{ fontSize: "18px" }} onClick={closeNavbar}>
                                 About
                             </NavLink>
                         </li>
                         <li className="nav-item me-3">
-                            <NavLink
-                                to="/projectCard"
-                                className="nav-link"
-                                style={{ fontSize: "18px" }} // Font size for list items
-                            >
+                            <NavLink to="/projectCard" className="nav-link" style={{ fontSize: "18px" }} onClick={closeNavbar}>
                                 Projects
                             </NavLink>
                         </li>
                         <li className="nav-item me-3">
-                            <NavLink
-                                to="/contact"
-                                className="nav-link"
-                                style={{ fontSize: "18px" }} // Font size for list items
-                            >
+                            <NavLink to="/contact" className="nav-link" style={{ fontSize: "18px" }} onClick={closeNavbar}>
                                 Contact
                             </NavLink>
                         </li>
+                        
                         <li className="nav-item">
-                            <button
-                                className="btn btn-outline-secondary"
+                            <i
+                                className={`bi ${isDarkMode ?"bi-moon": "bi-brightness-high" } `}
+                                style={{ fontSize: "30px", cursor: "pointer", color: isDarkMode ? "white" : "white" }}
                                 onClick={toggleTheme}
-                                style={{ fontSize: "20px" }} // Icon button size
-                            >
-                                {isDarkMode ? (
-                                    <i className="bi bi-brightness-high text-white"></i> // Sun icon for light mode
-                                ) : (
-                                    <i className="bi bi-moon text-white"></i> // Moon icon for dark mode
-                                )}
-                            </button>
+                            ></i>
                         </li>
                     </ul>
                 </div>

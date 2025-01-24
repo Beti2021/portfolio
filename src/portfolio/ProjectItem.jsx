@@ -1,20 +1,34 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom"; // Import NavLink for routing
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
-function ProjectItem({ name, description, imageUrl, projectUrl }) {
-    const [likes, setLikes] = useState(0); // State to track the number of likes
+function ProjectItem({ id, name, description, imageUrl, projectUrl }) {
 
+    const [likes, setLikes] = useState(() => {
+       
+        const storedLikes = localStorage.getItem(`projectLikes-${id}`);
+        return storedLikes ? parseInt(storedLikes, 10) : 0;
+    });
+
+    
+    useEffect(() => {
+        localStorage.setItem(`projectLikes-${id}`, likes);
+    }, [likes, id]);
+
+    
     const handleLike = () => {
-        setLikes(likes + 1); // Increment the likes
+        setLikes((prevLikes) => prevLikes + 1); 
     };
 
     return (
-        <div className="card h-100"> {/* Ensure the card itself takes full height */}
+        <div className="card h-100">
+            
             <img src={imageUrl} className="card-img-top" alt={name} />
-            <div className="card-body d-flex flex-column"> {/* Make the card body a flex container */}
+            <div className="card-body d-flex flex-column">
+               
                 <h5 className="card-title">{name}</h5>
-                <p className="card-text flex-grow-1">{description}</p> {/* Make the description grow to fill space */}
-                {/* Like Button */}
+                
+                <p className="card-text flex-grow-1">{description}</p>
+                
                 <div className="d-flex justify-content-between align-items-center mt-3">
                     <button className="btn btn-outline-success" onClick={handleLike}>
                         Like <i className="bi bi-hand-thumbs-up"></i> {likes}

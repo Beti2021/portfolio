@@ -88,7 +88,7 @@ function Contact() {
             <div className="d-flex justify-content-center">
                 <form
                     onSubmit={handleSubmit}
-                    className="bg-secondary p-4 rounded"
+                    className="bg-secondary p-4 rounded contact-form"
                     style={{ maxWidth: "400px", width: "100%" }}
                 >
                     <div className="mb-3">
@@ -149,7 +149,7 @@ function Contact() {
                         ></textarea>
                         {errors.message && <div className="invalid-feedback">{errors.message}</div>}
                     </div>
-                    <button type="submit" className="btn btn-success text-white w-100">
+                    <button type="submit" className="btn btn-success  w-100">
                         Send
                     </button>
                 </form>
@@ -164,14 +164,13 @@ function Contact() {
                 </p>
             </div>
 
-            {/* Social Media Icons below phone number */}
             <div className="mt-4 d-flex justify-content-center">
                 <a
                     href="mailto:lovemelat14@gmail.com"
                     className="text-primary me-3 social-icon"
                     style={{ fontSize: "2rem", textDecoration: "none" }}
                 >
-                    <i className="bi bi-envelope"></i> {/* Email icon */}
+                    <i className="bi bi-envelope"></i>
                 </a>
                 <a
                     href="https://t.me/Melat17"
@@ -180,7 +179,7 @@ function Contact() {
                     className="me-3 text-primary social-icon"
                     style={{ fontSize: "2rem", textDecoration: "none" }}
                 >
-                    <i className="bi bi-telegram"></i> {/* Telegram icon */}
+                    <i className="bi bi-telegram"></i>
                 </a>
                 <a
                     href="https://instagram.com/melat.1996"
@@ -189,7 +188,7 @@ function Contact() {
                     className="me-3 text-primary social-icon"
                     style={{ fontSize: "2rem", textDecoration: "none" }}
                 >
-                    <i className="bi bi-instagram"></i> {/* Instagram icon */}
+                    <i className="bi bi-instagram"></i>
                 </a>
                 <a
                     href="https://github.com/Beti2021"
@@ -198,7 +197,7 @@ function Contact() {
                     className="text-primary social-icon"
                     style={{ fontSize: "2rem", textDecoration: "none" }}
                 >
-                    <i className="bi bi-github"></i> {/* GitHub icon */}
+                    <i className="bi bi-github"></i>
                 </a>
             </div>
         </div>
