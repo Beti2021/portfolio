@@ -1,184 +1,204 @@
 body{
-    background-color:#a0aecd;
-    font-family: "Edu AU VIC WA NT Arrows", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
- 
-  
-  
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-#home {
-    border-bottom-left-radius: 50px;
-    border-end-end-radius: 50px;
-}
-
-
-li{
-    list-style-type: none;
-}
-
-
-
-.nav-list .nav-link {
-    text-decoration: none;  
-    transition: color 0.3s ease, transform 0.3s ease; 
-    font-size: 20px;
-}
-
-.nav-list .nav-link:hover {
-    color:yellow!important; 
-    font-size: 1.4rem; 
-    transform: scale(1.1);
-}
-.img-fluid:hover{
-    transform: scale(1.1); 
-    transition: transform 0.3s ease;
-}
-
-.navbar{
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3); 
-    padding: 10px;
-    border-bottom-right-radius: 100px;
-    border-bottom-left-radius: 100px;
-}
-.bg-secondary{
-background-color:#333D51!important;
-}
-
-
-.project-image-wrapper {
-    position: relative; 
-    height: 200px; 
-    transition: background-color 0.3s ease; 
-}
-
-.project-description {
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    padding: 10px;
-   
-    color:white;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    text-align: center;
-    width: 100%;
-}
-
-.project-image-wrapper:hover .project-description {
-    opacity: 1; 
-}
-
-.project-image-wrapper:hover {
-    background-color:#872642;
-}
-
-.project-image-wrapper img {
-    transition: opacity 0.3s ease; 
-}
-
-
-.project-image-wrapper:hover img {
-    opacity: 0.2; 
-}
-
-.no-border-bottom {
-    border-bottom: none !important;
-}
-#skill{
-    background-color: #333D51;
-border-radius: 100px;
-
-}
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1050;
-    backdrop-filter: blur(5px); 
-}
-
-
-.modal-content {
-    background:#333D51;
-    color:white;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-
-.short-description {
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-body.modal-open {
-    overflow: hidden;
-}
-
-.text-primary {
-    cursor: pointer;
-    color: yellow!important;
-    text-decoration: none;
-}
-
-.text-primary:hover {
-    color:#D3AC2B!important;
-}
-.btn-primary{
-background-color:#a0aecd!important;
-border: none;
-}
-.btn-primary:hover{
-    background-color: #333D51!important;
-}
-
-
-footer {
-    background-color: #333D51;  
-    padding: 10px;
-    color:#D3AC2B; 
-}
-
-footer p {
-    font-size: 0.9rem;
+    background-color: #34495E;
+    color:#BDC3C7;
 }
 .bg-dark{
-    background-color: #333D51 !important;
+    background-color: #34495E!important ;
+}
+.btn-success{
+    color: white!important;
+}
+
+.bg-secondary{
+    background-color:#BDC3C7!important;
+}
+.text-primary{
+    color:#BDC3C7!important;
+}
+.text-white{
+    color:#BDC3C7!important;
 
 }
 
 
+img {
+    border: 2px solid #fff;
+    padding: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bi {
+    color: white; 
+}
+
+
+.navbar-nav .nav-link {
+    text-decoration: none; 
+    color: white; 
+    transition: all 0.3s ease; 
+}
+
+
+
+
+.btn-outline-secondary:hover{
+    background-color:#61dafb ;
+}
+
+
+.social-icon:hover {
+    color: #61dafb; 
+    transition: color 0.3s ease;
+}
+
+
+
+.navbar-nav .nav-link {
+    text-decoration: none;
+    color: white; 
+    position: relative; 
+    font-size: 18px; 
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+
+.navbar-nav .nav-link:hover {
+    color: #61dafb; 
+}
+
+/* Underline effect */
+.navbar-nav .nav-link::after {
+    content: ""; 
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 0; 
+    height: 2px; 
+    background-color:#61dafb; 
+    transition: width 0.4s ease, left 0.4s ease; 
+
+}
+.navbar-nav .nav-link:hover::after {
+    width: 100%; 
+    left: 0;
+}
+
+.text-primary .social-icon:hover {
+    color: #28a745; 
+    transition: color 0.3s ease;
+}
+
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;  
+}
+
+
+body.light-theme {
+    background-color: #BDC3C7; 
+    color: #34495E; 
+}
+
+
+body.light-theme .navbar {
+    background-color: #BDC3C7; 
+    color: #34495E; 
+    border-bottom: 1px solid #34495E;
+}
+
+
+body.light-theme .nav-link {
+    color: #BDC3C7; 
+}
+
+body.light-theme .nav-link:hover {
+    color: #61dafb; 
+}
+
+body.light-theme .nav-link:hover::after {
+    background-color: #61dafb; 
+}
+body.light-theme .text-white{
+    color:#BDC3C7!important;
+
+
+}
+
+navbar-toggler-icon {
+    background-color: transparent !important; 
+    border: none; 
+}
+
+
+
+body.light-theme .btn-outline-secondary {
+    border-color:#34495E;
+    color: #34495E; 
+}
+
+body.light-theme .btn-outline-secondary:hover {
+    background-color: #34495E; 
+    color: #BDC3C7; 
+}
+
+
+body.light-theme .social-icon:hover {
+    color: #34495E; 
+    transition: color 0.3s ease; 
+}
+
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6,
+body.light-theme p,
+body.light-theme a {
+    color: #34495E;
+}
+
+
+body.light-theme img {
+    border: 2px solid #34495E; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+body.light-theme .bg-secondary {
+    background-color: #34495E!important;
+    color: #BDC3C7; 
+}
+body.light-theme .text-primary{
+    color: #34495E!important;
+}
+
+
+body.light-theme .contact-form input,
+body.light-theme .contact-form textarea {
+    background-color: #BDC3C7; 
+    color: #34495E; 
+    border: 1px solid #34495E; 
+}
+
+body.light-theme .contact-form input::placeholder,
+body.light-theme .contact-form textarea::placeholder {
+    color: #34495E; 
+}
+
+body.light-theme .contact-form button {
+     
+    color: #34495E; 
+}
+
+body.light-theme .contact-form button:hover {
+    background-color:green;
+    color: #BDC3C7; 
+}
 
 
